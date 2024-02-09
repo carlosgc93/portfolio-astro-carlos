@@ -1,0 +1,37 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCIE = [
+    {
+        date: "Actualmente",
+        title: "Técnico en Computación",
+        company: "Empredimiento Personal",
+        description:
+            "Ofreciendo servicios especializados en mantenimiento preventivo y correctivo, instalación de software y asesoramiento en equipos de cómputo.",
+        link: "",
+    },
+    {
+        date: "agosto 2021 / junio 2022",
+        title: "Practicante de Residencia Profesional",
+        company: "OFICINA DE REPRESENTACION MIGRATORIA, Tenosique, Tabasco",
+        description:
+            "Manejo y representación de información mediante Excel y Power Point, captura de datos y soporte técnico",
+    },
+    {
+        date: "enero 2021 / julio 2021",
+        title: "Servicio Social Universitario",
+        company: "OFICINA ADMINISTRATIVA ESCUELA SECUNDARIA TECNICA #17",
+        description:
+            "Manipulación y representación de información mediante Excel y soporte técnico ",
+    },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {
+        EXPERIENCIE.map((experiencie) => (
+            <li class="mb-10 ms-6">
+                <ExperienceItem {...experiencie} />
+            </li>
+        ))
+    }
+</ol>

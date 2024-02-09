@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SocialPill from "../components/SocialPill.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import GithubIcon from "../components/icons/Github.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import BriefcaseIcon from "../components/icons/BriefCase.astro";
+import SobreMi from "../components/SobreMi.astro";
+import Experience from "../components/Experience.astro";
+import Proyects from "../components/Proyects.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+	title="Carlos Portfolio / Ing. en Sistemas / Desarollador"
+	description="Ingeniero de Sistemas Computacionales - Desarollador Web "
+>
+	<main class="px-4">
+		<SectionContainer id="ini" class="pb-36">
+			<img
+				class="rounded-full w-32 h-32 mb-4"
+				src="public/carlos-photo.png "
+				alt="carlos photo "
+			/>
+			<h1
+				class="text-white text-4xl font-bold flex flex-row gap-x-4 pb-4"
+			>
+				Hola mundo soy Carlos Garcia 👨‍💻 ¡Bienvenido a mi rincón digital!
+			</h1>
+			<h2 class="text-2xl text-white text-justify text-pretty">
+				Apasionado por la tecnología y por el desarrollo web, estoy en
+				la constante búsqueda del conocimiento para construir soluciones
+				y nuevas experiencias digitales.
+			</h2>
+			<nav class="flex gap-4 mt-8 flex-wrap">
+				<SocialPill href="https://www.linkedin.com/in/cagc93/">
+					<LinkedIn class="size-4 md:size-6" />
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/carlosgc93">
+					<GithubIcon class="size-4 md:size-6" />
+					GitHub
+				</SocialPill>
+				<SocialPill href="mailto:carlosgc93@gmail.com">
+					<MailIcon class="size-4 md:size-6" />
+					carlosgc93@gmail.com
+				</SocialPill>
+			</nav>
+		</SectionContainer>
+		<SectionContainer id="yo" class="pt-4 pb-28">
+			<h2
+				class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-white dark:text-white"
+			>
+				Sobre mí
+			</h2>
+			<SobreMi />
+		</SectionContainer>
+		<SectionContainer id="exp" class="pt-12 pb-36">
+			<h2
+				class="text-2xl font-semibold text-pretty text-white mb-6 flex gap-x-3"
+			>
+				<BriefcaseIcon class="size-8 text-pretty" />
+				Experiencia
+			</h2>
+			<Experience />
+		</SectionContainer>
+		<SectionContainer id="pro" class="pt-12 pb-36">
+			<Proyects />
+		</SectionContainer>
+		<Footer />
+	</main>
+</Layout>
